@@ -15,8 +15,8 @@ function CustomNavbar() {
                 <Navbar.Toggle aria-controls="basic-navbar-nav" />
                 <Navbar.Collapse id="basic-navbar-nav">
                     <Nav className="me-auto">
-                    <Nav.Link as={Link} to="/about" className="nav-link-glowing">About Us</Nav.Link>
-                    <Nav.Link as={Link} to="/" className="nav-link-glowing">Admission Form</Nav.Link>
+                    <Nav.Link as={Link} to="/" className="nav-link-glowing">About Us</Nav.Link>
+                    <Nav.Link as={Link} to="/admissionform" className="nav-link-glowing">Admission Form</Nav.Link>
                     <Nav.Link as={Link} to="/report" className="nav-link-glowing">Report</Nav.Link>
                         {/* Add more navigation links as needed */}
                     </Nav>
