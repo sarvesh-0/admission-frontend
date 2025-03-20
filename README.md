@@ -1,3 +1,6 @@
+# Click link below to view Application
+https://sarvesh-0.github.io/admission-frontend/
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
