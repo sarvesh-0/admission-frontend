@@ -1,24 +1,32 @@
-import logo from './logo.svg';
 import './App.css';
-
+import React from 'react';
+import AdmissionForm from './components/AdmissionForm';
+import Report from './components/Report';
+import EditAdmissionForm from './components/EditAdmissionForm'; // Import
+import ViewAdmissionForm from './components/ViewAdmissionForm';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import './App.css';
+import Navbar from './components/Navbar';
+import Footer from './components/footer';
+import AboutUs from './components/AboutUs';
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <Router>
+    <div className="app-container">
+      <Navbar />
+        <main className="main-content">
+            <Routes>
+                <Route path="/" element={<AdmissionForm />} />
+                <Route path="/report" element={<Report />} />
+                <Route path="/about" element={<AboutUs/>}/>
+                <Route path="/view/:id" element={<ViewAdmissionForm />} />
+                <Route path="/edit/:id" element={<EditAdmissionForm />} /> {/* Add route for editing */}
+            </Routes>
+        </main>
+        <Footer />
     </div>
+</Router>
+        
   );
 }
 

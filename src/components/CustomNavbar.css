@@ -1,0 +1,80 @@
+.glowing-text {
+    font-size: 1.5rem;
+    font-weight: bold;
+    animation: colorChange 10s linear infinite; /* Apply the animation */
+}
+
+@keyframes colorChange {
+    0% {
+        color: #ecbbbb; /* Red */
+    }
+    16.66% {
+        color: #f7ac90; /* Orange */
+    }
+    33.33% {
+        color: #ffffa3; /* Yellow */
+    }
+    50% {
+        color: #aafcaa; /* Green */
+    }
+    66.66% {
+        color: #fbb0f6; /* Blue */
+    }
+    83.33% {
+        color: #e0b5ff; /* Indigo */
+    }
+    100% {
+        color: #c9fdbb; /* Violet */
+    }
+}
+
+.nav-link-glowing {
+    animation: colorChange 15s linear infinite; /* Use the same animation */
+    color: #333; /* Default text color (will be overridden by animation) */
+    position: relative; /* Needed for the pseudo-element */
+}
+
+/* Create a pseudo-element for the second half of the text */
+.nav-link-glowing::before {
+    content: attr(data-text); /* Use a data attribute to store the text */
+    position: absolute;
+    top: 0;
+    left: 50%; /* Start at the middle */
+    width: 50%; /* Cover the right half */
+    overflow: hidden; /* Hide the overflowing part */
+    animation: colorChange2 10s linear infinite; /* Use a different animation for the second half*/
+    white-space: nowrap;
+
+}
+
+@keyframes colorChange2 {
+    0% {
+        color: #9400d3; /* Violet */
+        text-shadow: 0 0 10px #9400d3;
+    }
+    16.66% {
+		color: #4b0082; /* Indigo */
+        text-shadow: 0 0 10px #4b0082;
+    }
+    33.33% {
+       color: #0000ff; /* Blue */
+        text-shadow: 0 0 10px #0000ff;
+    }
+    50% {
+       color: #00ff00; /* Green */
+        text-shadow: 0 0 10px #00ff00;
+    }
+    66.66% {
+        color: #ffff00; /* Yellow */
+        text-shadow: 0 0 10px #ffff00;
+    }
+    83.33% {
+        color: #ff7f00; /* Orange */
+        text-shadow: 0 0 10px #ff7f00;
+    }
+
+    100% {
+		color: #ff0000;
+        text-shadow: 0 0 10px #ff0000;
+    }
+}

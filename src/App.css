@@ -1,38 +1,146 @@
-.App {
-  text-align: center;
+.navbar {
+  background: linear-gradient(135deg, #0052d4, #4364f7);
+  padding: 0.5rem 1rem; /* Reduced padding for a smaller navbar */
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  transition: background 0.3s ease;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.navbar:hover {
+  background: linear-gradient(135deg, #003366, #66ccff);
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.navbar-brand {
+  color: #fff;
+  font-size: 1.5rem; /* Slightly smaller font size */
+  font-weight: bold;
+  text-decoration: none;
+  transition: color 0.3s ease;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.navbar-brand:hover {
+  color: #6fb1fc;
+}
+
+.navbar-toggler {
+  border: none;
+  outline: none;
+}
+
+.navbar-toggler-icon {
+  background-color: #fff;
+}
+
+.navbar-nav {
   display: flex;
-  flex-direction: column;
+  justify-content: flex-end;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  flex-grow: 1;
 }
 
-.App-link {
-  color: #61dafb;
+.nav-item {
+  padding: 0.3rem 0.8rem; /* Reduced padding for smaller items */
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.nav-link {
+  color: #fff;
+  font-size: 1rem; /* Smaller font size */
+  text-transform: uppercase;
+  font-weight: bold;
+  letter-spacing: 0.8px;
+  transition: color 0.3s ease;
+}
+
+.nav-link:hover {
+  color: #6fb1fc;
+  text-decoration: none;
+}
+
+@media (max-width: 991px) {
+  .navbar-nav {
+      flex-direction: column;
+      align-items: flex-start;
+      width: 100%;
+      padding: 0.8rem;
   }
-  to {
-    transform: rotate(360deg);
+
+  .nav-item {
+      width: 100%;
+      text-align: left;
+  }
+
+  .nav-link {
+      padding: 0.6rem 1.2rem;
+      font-size: 1.1rem;
   }
 }
+
+  body {
+      background-color: #f8f9fa;
+      font-family: 'Arial', sans-serif;
+  }
+  .form-container {
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 30px;
+  margin-top: 50px;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+  height: 80vh; /* Set height to 80% of the viewport height */
+  overflow-y: auto; /* Enable vertical scrolling if content overflows */
+}
+
+  .form-container h2 {
+      text-align: center;
+      color: #007bff;
+      margin-bottom: 30px;
+  }
+  .form-group input[type="radio"] {
+      margin-right: 10px;
+  }
+  .form-group {
+      margin-bottom: 15px;
+  }
+  .file-input {
+      padding: 5px;
+      border: 2px solid #ddd;
+      border-radius: 4px;
+      display: block;
+      width: 100%;
+  }
+  button[type="submit"] {
+      background-color: #007bff;
+      color: white;
+      font-weight: bold;
+      width: 100%;
+      padding: 10px;
+      border: none;
+      border-radius: 5px;
+  }
+  button[type="submit"]:hover {
+      background-color: #0056b3;
+  }
+  .alert {
+      margin-top: 20px;
+      text-align: center;
+      font-weight: bold;
+  }
+  .form-container{
+     padding: 8px;
+     margin-top: 30px;
+     width: 50%;
+  }
+
+  .app-container {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* Ensure the container takes at least the full viewport height */
+  }
+  
+  .main-content {
+    flex: 1; /* Allow the main content to grow and take up available space */
+    padding: 20px; /* Add some padding for better visual appearance */
+  }
