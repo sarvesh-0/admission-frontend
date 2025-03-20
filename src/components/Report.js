@@ -7,6 +7,10 @@ import DataTable from 'react-data-table-component';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faEye, faEdit, faTrash } from '@fortawesome/free-solid-svg-icons';
 
+
+
+
+
 function Report() {
     const [admissionForms, setAdmissionForms] = useState([]);
     const [loading, setLoading] = useState(true);
@@ -138,7 +142,9 @@ function Report() {
 	}, [filterText, resetPaginationToggle]);
 
     if (loading) {
-        return <div>Loading...</div>;
+        return <div>
+        Loading
+      </div>;
     }
 
     if (error) {
