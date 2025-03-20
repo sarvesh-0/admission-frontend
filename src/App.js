@@ -16,9 +16,9 @@ function App() {
       <Navbar />
         <main className="main-content">
             <Routes>
-                <Route path="/" element={<AdmissionForm />} />
+                <Route path="/admissionform" element={<AdmissionForm />} />
                 <Route path="/report" element={<Report />} />
-                <Route path="/about" element={<AboutUs/>}/>
+                <Route path="/" element={<AboutUs/>}/>
                 <Route path="/view/:id" element={<ViewAdmissionForm />} />
                 <Route path="/edit/:id" element={<EditAdmissionForm />} /> {/* Add route for editing */}
             </Routes>
